@@ -35,7 +35,7 @@
 }
 
 .form-container{
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -90,12 +90,13 @@
 }
 
 .button input{
-    color: #Ffffff;
+    color: #FFFFFD;
     background: #FF00CC;
     border-radius: 8px;
     padding: 0px;
     cursor: pointer;
     transition: all 0.4s ease-out;
+    font-weight: bolder;
 }
 
 .button input:hover{
@@ -103,7 +104,7 @@
 }
 
 .board-container{
-    display: flex;
+    display: none;
 }
 
 .board{
@@ -167,6 +168,13 @@
     height: 100%;
     background: #fff;
     opacity: 0.5;
-    background: url("../images/winner.gif");
+    background: url("../images/winner\ \(1\).gif") center center no-repeat;
+    background-size: cover;
     z-index: 100;
+}
+.button input:disabled{
+    background: linear-gradient(to right,#ee9ca7,#ffdde1);
+    cursor: not-allowed;
+    font-weight: bold;
+    color: #7f2020;
 }
