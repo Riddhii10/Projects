@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Dice Game Riddhi</title>
+</head>
+<body>
+    <div class="container">
+        <div class="dice-game">
+            <form action="" class="form-container" id="form-container" onsubmit="firstClick(click)">
+                <h1 class="form-heading">
+                    ENTER GAME DETAILS 
+                </h1>
+                <div class="input-boxes">
+                    <div class="input-group">
+                        <i class="fa-solid fa-user-large"></i>
+                        <!-- input 1 -->
+                        <input type="text" placeholder="Enter PLAYER 1 name " required> 
+
+                    </div>
+                    <div class="input-group">
+                        <i class="fa-solid fa-user-large"></i>
+                        <!-- input 2 -->
+                        <input type="text" placeholder="Enter PLAYER 2 name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa-solid fa-trophy"></i>
+                        <!-- input 3 -->
+                        <input type="text" placeholder="Enter total score" min="10" max="100" required>
+                    </div>
+                    <div class="input-group button">
+                        <!-- input 4 -->
+                        <input type="submit" value="Start Game" style="border: 0px;">
+                    </div>
+                </div>
+            </form>
+            <div class="board-container" id="board-container">
+                <div class="board">
+                    <div class="player1" id="player1">
+                        <h1 class="heading">
+                            PLAYER 1
+                        </h1>
+                        <h1 class="score">
+                            0
+                        </h1>
+                        <div class="dice-image">
+                            <img src="../images/dice1 (1).png" alt="">
+                        </div>
+                        <div class="input-group button" id="player1-button">
+                            <!-- input 5 -->
+                            <input type="button" value="Roll over " onclick=" roll(1)" >
+                        </div>
+                    </div>
+                    <div class="player2" id="player2">
+                        <h1 class="heading">
+                            PLAYER 2
+                        </h1>
+                        <h1 class="score">
+                            0
+                        </h1>
+                        <div class="dice-image">
+                            <img src="../images/dice1 (1).png" alt="">
+                        </div>
+                        <div class="input-group button" id="player2-button">
+                            <!-- input 6 -->
+                            <input type="button" value="Roll over" disabled onclick="roll(2)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+</html>

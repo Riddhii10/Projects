@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   /* padding and border are included in the width and height */
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"width" 100;
+}
+
+.container{
+    max-width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to right, #12c2e9,#c471ed,#f64f59);
+}
+
+.dice-game{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container,.board-container{
+    width: 50%;
+    height: 70vh;
+    background-color:#Ffffff;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: rgb(14 14 14) 0px 7px 29px 0px;
+}
+
+.form-container{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-heading{
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.input-boxes{
+    margin-top: 30px;
+    width: 60%;
+}
+
+.input-group{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0px;
+}
+
+.input-group input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    padding: 0px 30px;
+    font-size: 15px;
+    font-weight:100;
+    border-bottom: 2px solid rgb(41, 35, 35);
+}
+
+.input-group input:focus{
+    border-color: #d45f66;
+}
+
+.input-group i{
+    position: absolute;
+    color: #FF00CC;
+    font-size: 17px;
+}
+
+.button{
+    margin-top: 40px;
+    border-bottom: 0px;
+}
+
+.button input{
+    color: #Ffffff;
+    background: #FF00CC;
+    border-radius: 8px;
+    padding: 0px;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+}
+
+.button input:hover{
+    background: linear-gradient(to right,#4568DC,#B06AB3);
+}
+
+.board-container{
+    display: flex;
+}
+
+.board{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.player1, .player2{
+    width: 50%;
+    height: 100%;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    background-color:whitesmoke;
+}
+.heading{
+    width: 100%;
+    font-size: 5vh;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.score{
+    color: #4568DC;
+    font-size: 7vh;
+}
+
+.dice-image{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dice-image img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: rgb(14 14 14) 0px 7px 29px 0px;
+}
+
+#player1-button,#player2-button{
+    width: 70%;
+}
+
+#player-1-button input[disabled],
+#player-2-button input[disabled] {
+  background: #f5f5f5;
+  color: #000000;
+  cursor: not-allowed;
+}
+
+#winner {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    opacity: 0.5;
+    background: url("../images/winner.gif");
+    z-index: 100;
+}
