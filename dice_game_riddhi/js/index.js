@@ -20,6 +20,7 @@ function roll(player_no){
     const num=Math.floor((Math.random()*6)+1)
     const playerDetails=document.getElementById(`player${player_no}`)
     playerDetails.querySelector(".dice-image img").setAttribute("src",`../images/dice${num}.png`)
+    document.getElementById('diceSound').play();
     switch(player_no){
         case 1:
             score1=score1+num
