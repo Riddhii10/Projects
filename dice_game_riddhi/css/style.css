@@ -178,3 +178,41 @@
     font-weight: bold;
     color: #7f2020;
 }
+
+.dice{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 100%;
+    height: auto;
+    animation: rotate-scale 1s ease-in-out forwards;
+}
+@keyframes rotate-scale {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg) ;
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg) ;
+    }
+  }
+
+  .dice-image {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .dice-image.spin {
+    animation: spin 1s ease-in-out forwards;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
