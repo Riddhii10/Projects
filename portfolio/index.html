@@ -28,6 +28,7 @@
         }
         nav .left{
             font-size: 1.5rem;
+            text-shadow: 3px 2px 1px white;
         }
         nav .right ul{
             display: flex;
@@ -37,15 +38,39 @@
             list-style: none;
             margin: 0px 23px;
         }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            color:#2d2435;
+            font-size: 1.04rem;
+            text-shadow: 1px 1px 1px white;
+        }
         .firstSection{
             display: flex;
             justify-content: space-around;
-            margin: 23px 0px;
+            align-items: center;
+            margin: 80px 0px;
         }
-        .firstSection .leftSection{
-            width: 34px;
-            background-color: red;
+        .firstSection > div{
+            width: 30%;
         }
+        .firstSection .leftSection1{
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        .firstSection .rightSection1 img{
+            width: 109%;
+            margin: 15px 0px;
+        }
+        .purple{
+            color: #ae8bce;
+        }
+        #element{
+            color: #a27ebf;
+        }
+        
     </style>
 </head>
 <body>
@@ -56,24 +81,41 @@
             </div>
             <div class="right">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Project</li>
-                    <li>Contact Me</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Project</a></li>
+                    <li><a href="/">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
         <section class="firstSection">
-            <div class="leftSection">
-                
+            <div class="leftSection1">
+                Hii, my name is <span class="purple">RIDDHI</span>  
+                <div>
+                    and I am a passionate 
+                    <div>
+                        <span id="element"></span>
+                    </div>
+                    
+                </div>
             </div>
-            <div class="rightSection">
-
+            <div class="rightSection1">
+                <img src="./female1.webp" alt="">
             </div>
         </section>
+        <section class="secondSection">
+            <h1>Past Experience</h1>
+        </section>
     </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Developer', 'Graphic Designer','Web Designer','Video Editor'],
+          typeSpeed: 80,
+        });
+      </script>
 </body>
 </html>
