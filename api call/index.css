@@ -1,22 +1,31 @@
 table {
-    border-collapse: collapse;
-    width: 100%;
+  border-collapse: collapse;
+  width: 100%;/
+}
+th, td {
+  border: 2px solid #101619;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #9cc1d7;
+}
+.spinner {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#userListTable {
+  display: none;
+}
+
+#userListTable img {
+    width: 116px;
+    height: auto;
   }
-  th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-  }
-  th {
-    background-color: #f2f2f2;
-  }
-  .spinner {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    height: 100px;
-  }
-  #userListTable {
-    display: none;
-  }
-  
+
