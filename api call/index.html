@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .spinner {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+    }
+    #userListTable {
+      display: none;
+    }
+    
+  </style>
+  <title>User List</title>
+</head>
+<body>
+  <div class="spinner">
+    <img src="./Spinner-5.gif" alt="Loading">
+  </div>
+  <table id="userListTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Email</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Avatar</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const spinner = document.querySelector('.spinner');
+    const tbody = document.querySelector('#userListTable tbody');
+    const userListTable = document.querySelector('#userListTable');
+
+    // Fetch user data from the server
+    async function fetchUserData() {
+      const response = await fetch('https://reqres.in/api/users');
+      const { data } = await response.json();
+      return data;
+    }
+
+    // Render the user list in table format
+    function renderUserList(users) {
+      tbody.innerHTML = '';
+      users.forEach(user => {
+        const row = tbody.insertRow();
+        const idCell = row.insertCell();
+        const emailCell = row.insertCell();
+        const firstNameCell = row.insertCell();
+        const lastNameCell = row.insertCell();
+        const avatarCell = row.insertCell();
+
+        idCell.textContent = user.id;
+        emailCell.textContent = user.email;
+        firstNameCell.textContent = user.first_name;
+        lastNameCell.textContent = user.last_name;
+        avatarCell.innerHTML = `<img src="${user.avatar}" alt="Avatar" width="50">`;
+      });
+    }
+
+    // Fetch user data and render it
+    (async () => {
+      spinner.style.display = 'flex'; // Show the spinner
+      const users = await fetchUserData();
+      spinner.style.display = 'none'; // Hide the spinner
+      userListTable.style.display = 'table'; // Show the table
+      renderUserList(users);
+    })();
+  </script>
+</body>
+</html>
