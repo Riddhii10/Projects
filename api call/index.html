@@ -21,6 +21,10 @@
       justify-content: center;
       align-items: center;
       height: 100px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
     #userListTable {
       display: none;
@@ -73,7 +77,7 @@
         emailCell.textContent = user.email;
         firstNameCell.textContent = user.first_name;
         lastNameCell.textContent = user.last_name;
-        avatarCell.innerHTML = `<img src="${user.avatar}" alt="Avatar" width="50">`;
+        avatarCell.innerHTML = `<img src="${user.avatar}" alt="Avatar" width="50"/>`;
       });
     }
 
@@ -81,9 +85,11 @@
     (async () => {
       spinner.style.display = 'flex'; // Show the spinner
       const users = await fetchUserData();
-      spinner.style.display = 'none'; // Hide the spinner
-      userListTable.style.display = 'table'; // Show the table
-      renderUserList(users);
+      setTimeout(() => {
+        spinner.style.display = 'none'; // Hide the spinner after 2 seconds
+        userListTable.style.display = 'table'; // Show the table
+        renderUserList(users);
+      }, 2000);
     })();
   </script>
 </body>
