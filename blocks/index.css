@@ -46,7 +46,8 @@ body{
     touch-action: manipulation;
 }
 #b1:hover {
-    background-color: #a8bdb7;
+    background-color: #ceaf8d;
+    
 }
 
 #b1:active {
