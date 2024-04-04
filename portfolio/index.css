@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #1c1c2b;
+  color: white;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70px;
+  background-color: #a27ebf;
+  color: #1d1d39;
+  font-weight: bolder;
+}
+nav .left {
+  font-size: 1.5rem;
+  text-shadow: 3px 2px 1px white;
+}
+nav .right ul {
+  display: flex;
+  justify-content: center;
+}
+nav .right ul li {
+  list-style: none;
+  margin: 0px 23px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+nav ul li a:hover {
+  color: #2d2435;
+  font-size: 1.04rem;
+  text-shadow: 1px 1px 1px white;
+}
+.firstSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 31px 0px;
+}
+.firstSection > div {
+  width: 30%;
+}
+.firstSection .leftSection1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.firstSection .rightSection1 img {
+  width: 109%;
+  margin: 15px 0px;
+}
+.purple {
+  color: #ae8bce;
+}
+#element {
+  color: #a27ebf;
+}
+.secondSection {
+  max-width: 91vw;
+  margin: auto;
+  height: 80vh;
+}
+main hr {
+  border: 0;
+  height: 3.5px;
+  background-color: #9b80bb;
+  margin: 24px 46px;
+  width: auto;
+}
+.secondSection h1 {
+  font-size: 1.5rem;
+}
+.grey {
+  color: gray;
+}
+.secondSection .box {
+  background: white;
+  height: 2px;
+  margin: 50px 0px;
+  width: 89vw;
+  display: flex;
+}
+.secondSection .vertical {
+  height: 93px;
+  width: 1px;
+  background-color: white;
+  margin: 0px 100px;
+}
+.image-top {
+  width: 25px;
+  position: relative;
+  top: -30px;
+  left: -10px;
+}
+.vertical-title {
+  position: relative;
+  top: 64px;
+  width: 150px;
+  left: -56px;
+  font-size: 13px;
+}
+.vertical-desc {
+  position: relative;
+  top: 63px;
+  color: gray;
+  width: 150px;
+  font-size: 9px;
+  left: -49px;
+}
+footer {
+  background-color: rgb(19, 18, 18);
+  padding: 23px 122px;
+}
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer > div {
+  width: 233px;
+}
+.footer ul {
+  list-style: none;
+}
+footer .footer-rights {
+  text-align: center;
+  color: gray;
+  padding-top: 19px;
+}
+
+.btn1 {
+  margin-left: 5px;
+  margin-top: 1px;
+  padding: 0.6em 1em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn1:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.btn1:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+.button-64 {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .button-64:active,
+  .button-64:hover {
+    outline: 0;
+  }
+  
+  .button-64 span {
+    background-color: rgb(5, 6, 45);
+    padding: 8px 5px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  .button-64:hover span {
+    background: none;
+  }
+  
+  @media (min-width: 768px) {
+    .button-64 {
+      font-size: 16px;
+      min-width: 155px;
+    }
+  }
